@@ -1,0 +1,15 @@
+<mat-list-item>
+  <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="1em">
+    <mat-form-field>
+      <input matInput [(ngModel)]="lineItem.item" placeholder="Item" />
+    </mat-form-field>
+    <mat-form-field>
+      <input #quantity [(ngModel)]="lineItem.quantity" matInput placeholder="Quantity" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [(ngModel)]="lineItem.rate" placeholder="Rate" />
+    </mat-form-field>
+    <label>{{ lineItem.quantity * lineItem.rate }}</label>
+    <button (click)="deleteLineItem()">Delete</button>
+  </div>
+</mat-list-item>

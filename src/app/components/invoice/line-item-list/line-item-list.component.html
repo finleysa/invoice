@@ -1,0 +1,5 @@
+<button (click)="addLineItem()">Add</button>
+<mat-list>
+  <app-line-item *ngFor="let lineItem of lineItems; let i = index" (delete)="deleteLineItem($event, i)">
+  </app-line-item>
+</mat-list>
